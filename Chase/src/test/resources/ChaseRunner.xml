@@ -7,8 +7,8 @@
     <parameter name="envName" value="browserstack"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="browserVersion" value="53.0"/>
-    <parameter name="url" value="https://www.amazon.com"/>
-    <parameter name="platform" value="mac"/>
+    <parameter name="url" value="https://www.chase.com"/>
+    <parameter name="platform" value="windows"/>
 
     <test name="Automation Test">
         <classes>
