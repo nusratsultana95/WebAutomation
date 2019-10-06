@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>Amazon</module>
         <module>Chase</module>
+        <module>SeleniumExercise</module>
     </modules>
 
     <dependencyManagement>
