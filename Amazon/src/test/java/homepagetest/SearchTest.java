@@ -22,7 +22,7 @@ public class SearchTest extends HomePage {
         sleepFor(2);
         resultPage.validateSearchPageDisplayed();
     }
-    @Test
+    @Test(enabled = false)
     public void testAllDropDownMenu() {
         List<WebElement> elementList = getAllElementFromList();//to perform different action on those list of web element
         //we can store it into a List<Webelement>.since this is returning list of webelement thats why we are feeding the List with Webelement.

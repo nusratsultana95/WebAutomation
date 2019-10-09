@@ -34,7 +34,7 @@ public class DropDownMouseHoverTest extends CommonAPI {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;//here driver needs
         //to cast with javascriptExecutor
         javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
-        //this string inside "" need to be memorise.
+        //this string inside "" needs to be memorise.
         sleepFor(10);
     }
 
