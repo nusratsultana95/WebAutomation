@@ -54,8 +54,8 @@ public class CommonAPI {
             System.setProperty("webdriver.gecko.driver","..\\Generic\\src\\main\\resources\\geckodriver");
             driver= new FirefoxDriver();
         }
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         return  driver;
     }
@@ -204,6 +204,7 @@ public class CommonAPI {
     }
 
     public void scrollIntoView(String locator) {
+       // WebElement element= getElementByLinkText(locator);//this is opt 1 and opt 2 is on 209 line last part
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", getElementByLinkText(locator));
     }
@@ -315,7 +316,8 @@ public class CommonAPI {
         }
     }
 
-    private Date getTimeByMiliseconds(long millis) {
+    private Date getTimeByMiliseconds(long millis) { //in some companies when needs to work on
+        //jenkins reporting or allure reporting then we need this time.
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(millis);
         return calendar.getTime();

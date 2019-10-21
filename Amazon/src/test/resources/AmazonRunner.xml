@@ -3,7 +3,7 @@
 
 <suite name="Selenium Test Suite" parallel="false">
 
-<parameter name="cloud" value="true"/>
+<parameter name="cloud" value="false"/>
 <parameter name="envName" value="saucelabs"/>
 <parameter name="browser" value="chrome"/>
 <parameter name="browserVersion" value="77.0"/>
@@ -12,7 +12,7 @@
 
 <test name="Automation Test">
     <classes>
-        <class name="homepagetest.SearchTest"/>
+        <class name="homepagetest.ShopperTests"/>
     </classes>
 </test>
 </suite>
