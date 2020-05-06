@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class iFrameTests extends CommonAPI {
 
-    @Test(enabled = false)
+    @Test()
     public void iFrameTests() {
         driver.switchTo().frame(1);//frame() takes different parameter::frameID,FrameName,FrameIndex
         //and we are using frameindex

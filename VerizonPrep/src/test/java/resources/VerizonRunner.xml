@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
@@ -8,12 +7,12 @@
     <parameter name="envName" value="saucelabs"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="browserVersion" value="77.0"/>
-    <parameter name="url" value="https://www.toolsqa.com/iframe-practice-page"/>
+    <parameter name="url" value="https://www.amazon.com"/>
     <parameter name="platform" value="windows"/>
 
-    <test name="Automation tests">
+    <test name="Automation Test">
         <classes>
-            <class name="tests.iFrameTests"/>
+            <class name=""/>
         </classes>
     </test>
 </suite>

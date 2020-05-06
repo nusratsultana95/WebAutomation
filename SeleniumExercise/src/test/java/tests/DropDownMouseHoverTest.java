@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class DropDownMouseHoverTest extends CommonAPI {
 
-    @Test(enabled = false)
+    @Test
     public void testDropDown() {
         WebElement element = getElement("//select[@id='gh-cat']");//this is a customise xpath.
         Select select = new Select(element);//Select class uses>> to select dropDown element.
@@ -18,7 +18,7 @@ public class DropDownMouseHoverTest extends CommonAPI {
     }
 
 
-    @Test(enabled = false)
+    @Test
     public void testMouseHover() {
         WebElement element = getElementByLinkText("Fashion");
         Actions actions = new Actions(driver);//everytime we use Actions we need to feed that with Webdriver's obj

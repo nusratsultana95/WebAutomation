@@ -5,8 +5,10 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -83,11 +85,13 @@ public class CommonAPI {
                                            String envName) throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("name","Colud Execution");
-        //setcapability is a property which takes key and value
+        //setcapability is a method which takes key and value
         desiredCapabilities.setCapability("browserName",browser);
         desiredCapabilities.setCapability("browser_version",browserVersion);
         desiredCapabilities.setCapability("os",platform);
         desiredCapabilities.setCapability("os_version","Windows 10");
+
+        //desiredCapabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION,true);
 
         if(envName.equalsIgnoreCase("saucelabs")){
             desiredCapabilities.setCapability("resolution","1600x1200");
@@ -99,6 +103,68 @@ public class CommonAPI {
         }
         return driver;
     }
+
+/* public WebDriver getLocalDriver(String browserName, String os) {
+//
+//        // if (browserName == "Chrome")
+//        if (browserName.equalsIgnoreCase("chrome")) {
+//
+//            /**
+//             * Command Line Arguments
+//             * https://peter.sh/experiments/chromium-command-line-switches/
+//             *
+//
+//            ChromeOptions options =new ChromeOptions();
+//            // options.setHeadless(true);
+//            options.addArguments("--start-maximized");
+//            options.addArguments("--ignore-certificate-errors");
+//            options.addArguments("--incognito");
+//
+//            //the link  for the arguments:: https://peter.sh/experiments/chromium-command-line-switches/
+//            based on requirments we need to use these args
+
+//
+//            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+//            capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+//
+//            if (os.equalsIgnoreCase("windows")) {
+//                System.setProperty("webdriver.chrome.driver", "../generic/drivers/windows/chromedriver.exe");
+//                driver = new ChromeDriver(options);
+//                //  TestLogger.log("Chrome Browser Launched");
+//            } else if (os.equalsIgnoreCase("mac")) {
+//                System.setProperty("webdriver.chrome.driver", "../generic/drivers/mac/chromedriver");
+//                driver = new ChromeDriver(options);
+//                // TestLogger.log("Chrome Browser Launched");
+//            }
+//        }
+//        else if (browserName.equalsIgnoreCase("firefox")) {
+//            *
+//             * https://chercher.tech/java/chrome-firefox-options-selenium-webdriver
+//             *
+//             *
+//            FirefoxOptions options = new FirefoxOptions();
+//            //options.setHeadless(true);
+//            options.addArguments("--start-maximized");
+//            options.addArguments("--ignore-certificate-errors");
+//            options.addArguments("--private");
+//            DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//            capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
+//
+//
+//            if (os.equalsIgnoreCase("windows")) {
+//                System.setProperty("webdriver.gecko.driver", "../generic/drivers/windows/geckodriver.exe");
+//                driver = new FirefoxDriver(options);
+//            } else if (os.equalsIgnoreCase("mac")) {
+//                System.setProperty("webdriver.gecko.driver", "../generic/drivers/mac/geckodriver");
+//                driver = new FirefoxDriver(options);
+//            }
+//        }
+//
+//        return driver;
+    }
+*/
+
+
     /**
      * @param platform       -
      * @param url            -

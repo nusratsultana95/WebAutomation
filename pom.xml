@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>Amazon</module>
         <module>SeleniumExercise</module>
+        <module>VerizonPrep</module>
     </modules>
 
     <dependencyManagement>
